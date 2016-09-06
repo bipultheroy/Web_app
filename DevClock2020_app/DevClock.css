@@ -1,0 +1,102 @@
+
+body{
+min-width:700px;
+background-color: #8b9dc3;
+font-family: Helvetica, sans-serif, Arial;
+}
+
+h1{
+font-family:Impact, Charcoal, sans-serif,Arial;
+color: #CCCCCC;
+font-weight: lighter;
+}
+
+
+p{
+font-family: Impact,Helvetica, sans-serif, Arial;
+font-weight: lighter;
+padding: 20px;
+background-color:#ededed;
+font-size: 20px;
+border: 3px solid gray;
+border-radius: 20px;
+}
+
+#developer{
+
+font-color:gray;
+font-weight:lighter;
+font-size:10px;
+}
+
+
+.Clock {
+margin: auto;
+width: 40%;
+padding: 10px;
+background-color: #f3f3f3;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align: center;
+border-radius: 55px ;
+border: 30px solid #BCC6CC;
+}
+
+#Buttons 
+{
+margin: auto;
+width: 40%;
+background-color: #555555;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align: center;
+border-radius: 25px ;
+padding: 15px 32px;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+
+}
+
+#startButton {
+margin: auto;
+width: 40%;
+padding: 10px;
+border-radius:20px;
+background-color:#4CAF50;
+cursor: pointer;
+
+}
+
+#stopButton {
+margin: auto;
+width: 40%;
+padding: 10px;
+border-radius:20px;
+background-color:#f44336;
+cursor: pointer;
+}
+/*Menu css*/
+ul {
+    list-style-type: none;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+

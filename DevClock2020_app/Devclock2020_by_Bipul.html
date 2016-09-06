@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>202020-Dev_Clock</title>
+<style>
+@import "DevClock.css"
+</style>
+</head>
+
+<body>
+<div class="Clock">
+<p>Time passed:&nbsp <span id='mintime'style='color: #4B0082; font-weight: bold; font-size:36px;'><b>00 </b></span>min&nbsp :
+<span id='sectime' style='color: #4B0082; font-weight: bold; font-size:36px;'><b>&nbsp 00</b></span>sec<br><br></p>
+<h1 id='message'>DevClock2020<span id='developer'>by NerdCoder</span></h1>
+
+<script>
+ i= 1
+ j= 0
+ k=0;
+audio = new Audio('sounds/Uptone.mp3');
+
+
+function startCounting()
+{
+ //control_min = setInterval(getMin,60000)
+ control = setInterval(devTimer,1000)
+}
+ 
+
+function devTimer()
+{
+
+ //adding a zero before single digits seconds
+if (i<10) document.getElementById('sectime').innerHTML = '0'+i;
+else if (i==60) document.getElementById('sectime').innerHTML = '00';
+else document.getElementById('sectime').innerHTML = i;
+
+//if(j==20 && i==0) secCounter();
+
+
+//reseting sec(60 sec= 1min),increasing min
+if(i==60) 
+{
+i=0;
+++j;
+}
+
+//adding zero for single digits minutes
+if (j<10) document.getElementById('mintime').innerHTML = '0'+j;
+else document.getElementById('mintime').innerHTML = j;
+
+//finish counting 20 min
+if(j==20 && i==0)  
+{
+
+document.getElementById('message').innerHTML = "<br><span style='color: #4B0082'>BOSS! Time to take a break</br></span>"+
+"<br><img src='Speaker.gif' style='height:200px;width:200px;'></br>";
+document.getElementById('mintime').innerHTML = '20';
+document.getElementById('sectime').innerHTML = '00';
+
+//playing the alarm
+audio.play();
+
+j=0;
+k=1;
+}
+//counting the extra 20 seconds
+if(j==0 && i==20 && k==1) stopCounting();
+i++;
+}
+
+
+//Stop the timer and pause the audio
+function stopCounting()
+{
+clearInterval(control);
+audio.pause();
+k=0;
+document.getElementById('message').innerHTML = "DevClock2020"+"<span id='developer'>by NerdCoder</span>";
+}
+</script>
+
+<div id="Buttons">
+<button id="startButton" type="button" onclick="startCounting()">Start</button>
+<button id="stopButton" type="button" onclick="stopCounting()">Stop</button>
+</div>
+
+</div>
+
+<h2 style= "text-align: center; font-family: impact,Arial; color:#34495e">Menu</h2>
+
+<div class="menu">
+<ul>
+  <li><a href="Devclock2020_by_Bipul.html">Home</a></li>
+  <li><a href="Help_devClock.html" target="_blank">Help</a></li>
+  <li><a href="AboutDevClockt.html" target="_blank">About</a></li>
+</ul>
+</div>
+</body>
+</html>
